@@ -39,3 +39,9 @@ This starter uses the service filesystem. Render Free services have ephemeral fi
 ## Security
 
 This starter is intended for private testing by one owner. Do not embed the admin API key in a publicly distributed Android APK: keys inside APKs can be extracted. A public multi-user service needs accounts, per-user authentication, quotas, abuse controls, malware scanning, durable object storage, backups, and operational monitoring.
+
+## Android app (AIDE Pro)
+
+The Android project source is in `android-aide/`. In AIDE Pro, use Open Project and select the `android-aide` folder after cloning or downloading this repository. Build and run the app on your Android device. It includes a pixel-style dark dashboard, server URL/API key settings, ZIP picker, publish, refresh, open-site, and delete-site actions.
+
+In the app, keep the API URL as `https://novahost-api.onrender.com` and enter the private `ADMIN_API_KEY` configured in Render. Do not share the key or publish an APK containing it; this first app is for owner-only testing. Android stores the entered key in app preferences, which is not a secure credential vault.
