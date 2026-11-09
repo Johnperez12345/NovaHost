@@ -385,7 +385,11 @@ public class MainActivity extends Activity {
                                         .setTitle("Delete " + slug + "?")
                                         .setMessage("This removes the published website files.")
                                         .setNegativeButton("CANCEL", null)
-                                        .setPositiveButton("DELETE", (dialog, which) -> deleteSite(slug))
+                                        .setPositiveButton("DELETE", new android.content.DialogInterface.OnClickListener() {
+                                            public void onClick(android.content.DialogInterface dialog, int which) {
+                                                deleteSite(slug);
+                                            }
+                                        })
                                         .show();
                                 }
                             });
